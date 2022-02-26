@@ -1,0 +1,1 @@
+web: gunicorn festcms2.wsgi --log-file -
