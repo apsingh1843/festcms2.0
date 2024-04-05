@@ -21,6 +21,7 @@
 		/>
 		<!-- <link rel="stylesheet" href="{% static 'events22.css' %}" /> -->
 		<link rel="stylesheet" href="{% static 'firefly.css' %}" />
+		<link rel="shortcut icon" type="image/jpg" href="{% static 'img/aarohan_logo1-01.png' %}">
 	</head>
 
 	<body
@@ -125,6 +126,7 @@
 							const c2 = parseInt(register[i].getAttribute("c2"));
 
 							const str1 = register[i];
+							const description = events[c1][c2].description.replace(/\n/g, '<br/>');
 							str1.addEventListener("click", () => {
 								const dv = document.querySelector(".modal");
 								dv.innerHTML = `
@@ -135,9 +137,11 @@
                     <div class="modalCardWrapper">
                         <img src="media/${events[c1][c2].logo}" alt="" />
                         <div class="">
+							<div class="modalDesc">
                             <p>
-                                ${events[c1][c2].description}
+                                ${description}
                             </p>
+							</div>
                             <h1>${events[c1][c2].eventName}</h1>
                             <div class="time">
                                 <h3>${new Date(
