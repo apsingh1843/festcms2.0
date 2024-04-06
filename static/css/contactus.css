@@ -62,7 +62,7 @@
   font-size: clamp(2rem, 5vw, 3.95rem);
   font-family: "Astro",display !important;
   letter-spacing: 5px;
-  color: rgb(237, 218, 255);
+  color: #13bbe1;
   text-transform: uppercase;
   /* text-shadow: rgb(183, 111, 251) 0 0 35px; */
   margin-block: 3rem;
