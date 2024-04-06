@@ -19,6 +19,7 @@
 }
 
 .container {
+  flex-direction: column;
   height: max-content;
   margin-top: 10vh;
   width: 100%;
@@ -59,7 +60,7 @@
   font-family: "Astro",display !important;
   letter-spacing: 5px;
   line-height: 35px;
-  color: rgb(237, 218, 255);
+  color: #13bbe1;
   text-transform: uppercase;
   margin-block: 3rem;
 }
@@ -338,4 +339,3 @@
     height: 50px;
   }
 }
-
