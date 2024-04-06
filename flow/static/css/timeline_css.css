@@ -369,7 +369,8 @@ button {
 	align-items: center;
 	flex-direction: column;
 	overflow: hidden;
-	background-image: url("https://img.freepik.com/free-photo/illustration-circle-with-abstract-neon-light-effects-great-futuristic-background_181624-26037.jpg?w=1060");
+	/* background-image: url("https://img.freepik.com/free-photo/illustration-circle-with-abstract-neon-light-effects-great-futuristic-background_181624-26037.jpg?w=1060"); */
+	background-image: url("../../static/images/timeline_bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
