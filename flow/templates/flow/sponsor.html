@@ -491,6 +491,7 @@
 			flex-wrap: wrap;
 			align-items: center;
 			justify-content: center;
+			margin-bottom: 10vh;
 			gap: 80px;
 			width: 100vw;
 
@@ -1153,13 +1154,32 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 
 				</div>
 				<div class="container">
-
+					{% if sponsors %}
+					{% for i in sponsors %}
 					<div class="card">
+						<div class="imgBx">
+							<img src="{{i.image.url}}">
+						</div>
+						<div class="contentBx">
+							<!-- <h2>The Times of India</h2> -->
+							
+							
+						</div>
+					</div>
+					{% endfor %}
+					{% else %}
+					<div class="comming soon" style="display: flex; color: #fff; text-align: center; justify-content: center; font-size: 3rem;">
+
+						COMING SOON
+					</div>
+					{% endif %}
+					
+					<!-- <div class="card">
 						<div class="imgBx">
 							<img src="{% static 'SponsorsPic/sp1.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>The Times of India</h2> -->
+						 <h2>The Times of India</h2>
 
 
 						</div>
@@ -1170,7 +1190,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp2new.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>Trak Labs</h2> -->
 						</div>
 					</div>
 
@@ -1179,7 +1198,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp3.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>Interview Buddy</h2> -->
 
 						</div>
 					</div>
@@ -1189,7 +1207,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp4.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>adda52.com</h2> -->
 
 						</div>
 					</div>
@@ -1199,7 +1216,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp5.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>coolberg</h2> -->
 
 						</div>
 					</div>
@@ -1209,7 +1225,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp6.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>boookd.com</h2> -->
 
 						</div>
 					</div>
@@ -1218,7 +1233,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp7.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>FORTUNE</h2> -->
 
 						</div>
 					</div>
@@ -1229,7 +1243,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp8.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>GrabOn</h2> -->
 
 						</div>
 					</div>
@@ -1238,7 +1251,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp9.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>STEP SET GO</h2> -->
 
 						</div>
 					</div>
@@ -1247,7 +1259,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp10.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>hoverRobotix</h2> -->
 
 						</div>
 					</div>
@@ -1256,7 +1267,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp11.jpe' %}g">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>Google Cloud</h2> -->
 
 						</div>
 					</div>
@@ -1268,13 +1278,12 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 						<h2>Nike Shoes</h2>
 		
 					</div>
-				</div> -->
+				</div> 
 					<div class="card">
 						<div class="imgBx">
 							<img src="{% static 'SponsorsPic/sp13.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>Indian Oil</h2> -->
 
 						</div>
 					</div>
@@ -1286,13 +1295,12 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 						<h2>Innovadores</h2>
 		
 					</div>
-				</div> -->
+				</div> 
 					<div class="card">
 						<div class="imgBx">
 							<img src="{% static 'SponsorsPic/sp15.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>Innovadores</h2> -->
 
 						</div>
 					</div>
@@ -1301,7 +1309,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp16.web' %}p">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>iSchoolConnect</h2> -->
 
 						</div>
 					</div>
@@ -1310,7 +1317,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp17.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>KnowAFest.com</h2> -->
 
 						</div>
 					</div>
@@ -1319,7 +1325,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp18.jpg' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>Kwikpic</h2> -->
 
 						</div>
 					</div>
@@ -1328,7 +1333,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp19.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>MENTORX</h2> -->
 
 						</div>
 					</div>
@@ -1337,7 +1341,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp20.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>RevUp</h2> -->
 
 						</div>
 					</div>
@@ -1346,7 +1349,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp21.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>SCONTO</h2> -->
 
 						</div>
 					</div>
@@ -1356,7 +1358,6 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp22.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>unstop</h2> -->
 						</div>
 					</div>
 
@@ -1365,9 +1366,8 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 							<img src="{% static 'SponsorsPic/sp23.png' %}">
 						</div>
 						<div class="contentBx">
-							<!-- <h2>Wolfram</h2> -->
 						</div>
-					</div>
+					</div> -->
 
 				</div>
 			</div>
@@ -1490,11 +1490,10 @@ box-shadow: 0 0 10px rgb(248, 0, 194); */
 					</div>
 				</div> -->
 
+				
 				{% include 'flow/navbarAndFooter/footer.html' %}
-
+			</div>
 		</div>
-	</div>
-	<!-- {% include 'flow/navbarAndFooter/footer.html' %} -->
 	</div>
 	</div>
 

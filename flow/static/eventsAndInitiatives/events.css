@@ -39,10 +39,10 @@ body {
 
 #myVideo {
   position: fixed;
-  z-index: -10;
+  z-index: 2;
   width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+  /* height: 100vh; */
+  object-fit: contain;
   top: 0;
   left: 0;
 }
@@ -142,6 +142,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2em;
+  min-height: 80vh;
+  /* margin-bottom: 100px; */
   /* height: calc(100vh - 183px); */
   overflow-y: hidden;
 }
@@ -469,6 +471,7 @@ body {
   padding-top: 6rem;
   padding: 0;
   margin: 0;
+  /* margin-top: 100px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
