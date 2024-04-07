@@ -45,7 +45,9 @@ window.addEventListener('DOMContentLoaded', function () {
         videoElement.autoplay = true;
         videoElement.muted = true;
 
+
     }
+    setTimeout(setVideoSource, 4000)
 
     setVideoSource();
 
