@@ -6,8 +6,13 @@ button {
   }
   
   .body {
-	/* background-color: #1a1a1a; */
-	overflow: hidden;
+	background: #383838;
+	color: #14fdce;
+	font-family: 'VT323';
+	font-size: 24px;
+	-webkit-font-smoothing: none;
+	line-height: 1.2;
+	  cursor: context-menu;
   }
   
   .background-animation {
@@ -362,8 +367,7 @@ button {
 	}
   .tcontainer{
 	position: relative;
-  
-	height: 100%;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -374,7 +378,6 @@ button {
 	background-size: cover;
 	background-position: center;
 	padding: 2rem;
-  
   }
   .timeline_vid{
 	  min-width: 100%;
