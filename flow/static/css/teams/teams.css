@@ -29,136 +29,75 @@ body {
   box-sizing: border-box;
 }
 
+
+section {
+  position: relative;
+}
+
 .teamHeading {
-  transform: translateY(180%);
-  z-index: 100000000000;
-  letter-spacing: 2rem;
-}
-
-/* START CODE FOR TEAM */
-
-.svg-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: fit-content;
-}
-
-.svg-icon {
-  transform: translateY(-25%);
-  /* transform: scale(1.5); */
-}
-
-.svgIcon {
-  transform: scale(1);
-}
-
-.svg-div h1 {
-  margin-top: 9rem;
-  font-size: 15rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 2rem;
+  color: white;
   font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: white;
+  z-index: 100;
+}
+
+.svgIcon {
+  display: block;
   position: relative;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 10rem;
 }
 
 
 
 @media (max-width: 400px) {
-
-  .svg-div h1 {
-    margin-top: 9rem;
-  }
-
-  .svg-div h1 {
-    font-size: 9rem;
-  }
-
-  .svg-icon {
-    width: 100%;
+  .teamHeading {
+    font-size: 5rem;
   }
 }
 
 @media screen and (max-width: 576px) and (min-width: 400px) {
-
   .teamHeading {
-    transform: translateY(210%);
-    z-index: 100000000000;
-    letter-spacing: 0.5rem;
-    font-size: 10rem !important;
-  }
-
-  .svg-icon {
-    transform: translateY(-15%);
-    /* transform: scale(1.5); */
-  }
-
-  .svg-div h1 {
-    margin-top: 11rem;
-  }
-
-  .svg-div h1 {
-    font-size: 11rem;
-  }
-
-  .svg-icon {
-    width: 100%;
+    font-size: 6rem;
   }
 }
 
 @media screen and (max-width: 768px) and (min-width: 576px) {
-
-  .svg-div h1 {
-    margin-top: 13rem;
-  }
-
-  .svg-div h1 {
-    font-size: 15rem;
-  }
-
-  .svg-icon {
-    width: 100%;
+  .teamHeading {
+    font-size: 7rem;
   }
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
-
-  .svg-div h1 {
-    margin-top: 15rem;
-  }
-
-  .svg-div h1 {
-    font-size: 15rem;
-  }
-
-  .svg-icon {
-    width: 100%;
+  .teamHeading {
+    font-size: 8rem;
   }
 }
 
 
 @media screen and (max-width: 1200px) and (min-width: 992px) {
-
-  .svg-div h1 {
-    margin-top: 15rem;
-  }
-
-  .svg-div h1 {
-    font-size: 15rem;
-  }
-
-  .svg-icon {
-    width: 100%;
+  .teamHeading {
+    font-size: 9rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-
-  .svg-div h1 {
-    margin-top: 16rem;
+  .teamHeading {
+    font-size: 9rem;
   }
+
 }
 
 
@@ -311,10 +250,6 @@ body {
   -webkit-animation: rotate-right 12s linear 0s infinite;
 }
 
-h1 {
-  text-align: center;
-  font-size: 10rem;
-}
 
 
 /* CODE FOR TEAM END */
@@ -385,7 +320,8 @@ h1 {
 }
 
 .card-content h1 {
-  font-size: 3rem;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 2rem;
   margin: 0px;
 }
 
@@ -502,6 +438,12 @@ input:checked~.modal {
 input:checked~.modal .content {
   color: #FFF;
   transition: color 0.5s ease 0.5s;
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: fixed !important;
+  margin-left: auto;
 }
 
 .mainTeam {
@@ -644,7 +586,7 @@ input:checked~.modal .content {
   }
 
   .teamCard {
-    padding-top: 15rem;
+    padding-top: 10rem;
   }
 
   .modal {
@@ -668,7 +610,7 @@ input:checked~.modal .content {
   }
 
   .card-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0px;
   }
 
@@ -728,7 +670,7 @@ input:checked~.modal .content {
   }
 
   .card-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0px;
   }
 
@@ -778,7 +720,7 @@ input:checked~.modal .content {
   }
 
   .card-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0px;
   }
 
@@ -836,11 +778,16 @@ input:checked~.modal .content {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .card-content h1 {
+    font-size: 3rem;
+  }
+}
 
 /* Hide the hamburger icon */
 
 #button {
-  z-index: 99;
+  z-index: 9999999999999999999999;
 }
 
 .hidden {
