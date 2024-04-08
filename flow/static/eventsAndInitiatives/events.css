@@ -147,7 +147,7 @@ body {
   overflow-y: scroll;
   /* margin-bottom: 100px; */
   /* height: calc(100vh - 183px); */
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 @media screen and (max-width: 1120px) {
