@@ -143,6 +143,8 @@ body {
   justify-content: center;
   gap: 2em;
   min-height: 80vh;
+  height: 92vh;
+  overflow-y: scroll;
   /* margin-bottom: 100px; */
   /* height: calc(100vh - 183px); */
   overflow-y: hidden;
