@@ -357,9 +357,14 @@ body {
   /* justify-content: center; */
 }
 .modalContent {
+  max-height: 70vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.modalContent::-webkit-scrollbar{
+  width: 0;
 }
 .modalCardWrapper p {
   font-size: 15px;
