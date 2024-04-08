@@ -151,6 +151,9 @@ body {
 @media screen and (max-width: 1120px) {
   .cards {
     z-index: -10000;
+    height: 100vh;
+    overflow-y: scroll;
+    margin-bottom: 10vh;
   }
 }
 .carddisplay {
