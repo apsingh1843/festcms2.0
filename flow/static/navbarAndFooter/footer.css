@@ -1,6 +1,6 @@
-.footer {
+/* .footer {
   position: relative;
-  background: #e97957;
+  background: #FA851B;
   min-height: 100px;
   padding: 5px 10px;
   margin: 0;
@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   margin-top: 10rem;
   
 }  
@@ -16,7 +16,17 @@
   .footer {
     flex-direction: column;
   }
+
+  .footer .logo{
+    display: none;
+  }
 }
+
+.footer .logo{
+  width: 100px;
+  height: 100px;
+}
+
 .social-icon {
   position: relative;
   display: flex;
@@ -45,58 +55,287 @@
   font-size: 1.5rem;
   font-weight: 300;
   font-family: 'Raleway', sans-serif;
-}  
-.wave {
+} 
+
+.upper-vector#vector1 {
   position: absolute;
   top: -100px;
   left: 0;
-  width: 100%;
+  color: #FA851B;
+  background-size: 1000px 200px;
+  animation: roll 5s ease-in-out alternate infinite;
+  z-index: 1;
+}
+
+.upper-vector#vector2 {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  color: #FA851B;
+  background-size: 1000px 200px;
+  animation: roll2 5s ease-in-out alternate infinite;
+  z-index: 1;
+}
+
+.upper-vector img{
+  width: 100px;
   height: 100px;
-  background: url("./images/wave1.png");
-  background-size: 1000px 100px;
-}  
-.wave#wave1 {
-  z-index: 10;
-  opacity: 1;
+}
+
+@keyframes roll {
+  0% {transform: translateX(0) rotate(0);}
+  100% {transform: translateX(45vw) rotate(2turn);}
+}
+
+@keyframes roll2 {
+  0% {transform: translateX(0) rotate(0);}
+  100% {transform: translateX(-45vw) rotate(-2turn);}
+}
+
+@media screen and (max-width: 400px) {
+  .upper-vector img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .upper-vector#vector1 {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    color: #FA851B;
+    animation: roll 4s ease-in-out alternate infinite;
+    z-index: 1;
+  }
+  
+  .upper-vector#vector2 {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: #FA851B;
+    animation: roll2 4s ease-in-out alternate infinite;
+    z-index: 1;
+  }
+
+  @keyframes roll {
+    0% {transform: translateX(0) rotate(0);}
+    100% {transform: translateX(35vw) rotate(2turn);}
+  }
+  
+  @keyframes roll2 {
+    0% {transform: translateX(0) rotate(0);}
+    100% {transform: translateX(-35vw) rotate(-2turn);}
+  }
+} */
+
+.content{
   bottom: 0;
-  animation: animateWaves 4s linear infinite;
+  position: relative;
+  /* margin-bottom: -5%; */
+}
+
+.social-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem;
 }  
-.wave#wave2 {
-  z-index: 9;
-  opacity: 0.5;
-  bottom: 10px;
-  animation: animate 4s linear infinite !important;
+.social-icon__item,
+.menu__item {
+  list-style: none;
 }  
-.wave#wave3 {
-  z-index: 10;
-  opacity: 0.2;
-  bottom: 15px;
-  animation: animateWaves 3s linear infinite;
-}  
-.wave#wave4 {
-  z-index: 9;
-  opacity: 0.7;
-  bottom: 20px;
-  animation: animate 3s linear infinite;
-}  
-@keyframes animateWaves {
-  0% {
-    background-position-x: 1000px;
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+/* .container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+} */
+
+
+.footer {
+  z-index: 1;
+  --footer-background:hsl(24, 86%, 53%);
+  display: grid;
+  position: relative;
+  max-width: 100%;
+  min-height: 10vh;
+  /* overflow-x:hidden; */
+}
+.footer .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+}
+.footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+          animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+.footer .content {
+  padding: 3rem;
+  background: var(--footer-background);
+  z-index: 2;
+}
+.footer .content .container {
+  /* max-width: 768px; */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem; */
+  color: #fff;
+}
+
+/* .content{
+
+} */
+
+.content h2 {
+  margin-bottom: .25rem;
+  font-size: 1.5rem;
+}
+
+.content span {
+  font-size: .875rem;
+}
+
+.footer__links  {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+  transition: all 150ms ease-out;
+  justify-content: center;
+}
+
+.footer__links .footer__link {
+  transition: all 150ms ease-out;
+  display: inline-block;
+}
+
+.footer__link:hover:after {
+    width: 100%;
+}
+
+.footer__link:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background-color: #fff;
+    transition: width .25s ease-out;
+}
+.footer__socials {
+  justify-self: flex-end;
+}
+
+.footer__social {
+  font-size: 1.25rem;
+  margin-right: 1.5rem;
+}
+.footer__social:hover {
+  opacity: 0.8;
+}
+
+.footer__copy {
+  text-align: center;
+  background:rgb(91, 73, 255);
+  font-size: .875rem;
+  text-align: center;
+  color: #dcdcdc;
+  padding: 3rem 0 2rem;
+}
+@-webkit-keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
   }
   100% {
-    background-positon-x: 0px;
-  }
-}  
-@keyframes animate {
-  0% {
-    background-position-x: -1000px;
-  }
-  100% {
-    background-positon-x: 0px;
+    width: 0rem;
+    height: 0rem;
   }
 }
-@media screen and (max-width: 400px){
-  .footer p{
-    font-size: 1rem;
+
+.bubbles{
+  position: absolute;
+}
+
+@keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+@-webkit-keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+
+@media screen and (max-width: 767px){
+  .footer .content {
+    padding: 0 1.5rem;
+  }
+  .footer .content .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content span {
+    font-size: .813rem;
+  }
+
+  .footer__links  {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  
+  .footer__socials {
+    justify-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 567px){
+  .footer .content .container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 3.5rem;
   }
 }

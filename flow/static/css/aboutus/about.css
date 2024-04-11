@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: Astro;
+  src: url("../../font/as.ttf");
+}
 /*
 *
 * Trunk version 2.0.0
@@ -6022,12 +6026,38 @@ html.rd-navbar-fixed-linked .page {
   color: #5b259e;
 }
 
-.heading::before {
+.background-container {
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  /* top: -8rem; */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .background-image {
+    top: -24rem; /* For small screen devices */
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .background-image {
+    top: -8rem; /* For larger screen devices */
+  }
+}
+
+/* .heading::before {
   content: "ABOUT US";
   display: flex;
   flex-wrap: wrap;
-  /* writing-mode: vertical-rl;
-  text-orientation: mixed; */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
   position: absolute;
   opacity: 0.5;
   top: 0;
@@ -6035,7 +6065,8 @@ html.rd-navbar-fixed-linked .page {
   font-size: 18.5vw;
   font-weight: 800;
   margin-bottom: 0.5em;
-}
+} */
+
 
 /* .heading::after {
   content: " ";
@@ -6053,22 +6084,65 @@ html.rd-navbar-fixed-linked .page {
   max-height: max-content;
   margin: 5em;
   border-radius: 40px;
-  border-spacing: 5em;
-  border-right: solid 2px #070300;
+  border-spacing: 5em; 
+  /* border-right: solid 2px #070300;
   background: rgba(35, 34, 34, 0.4);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); */
+}
+
+.changeText {
+  margin-bottom: 10px;
 }
 
 .changeText .aarohan {
   /* display: none; */
-  font-weight: 900;
+  font-weight: 600;
+  color: #13bbe1;
+  font-size: 30px;
+  font-family: "Astro";
 }
 
-.changeText:hover .aboutus {
+.changeText .year {
+  /* display: none; */
+  /* font-weight: 900; */
+  font-weight: 600;
+  font-size: 30px;
+  font-family: "Astro";
+}
+
+/* @font-face {
+  font-family: 'astrofont';
+  src: url('/static/fonts/as.ttf') format('truetype');
+} */
+
+
+.changeText .aboutus {
+  /* display: none; */
+  color: #13bbe1;
+  font-weight: lighter;
+  font-family: "Astro";
+  text-transform: capitalize;
+  font-size: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .changeText .aboutus {
+    font-size: 45px;
+  }
+  .changeText .aarohan {
+    font-size: 20px;
+  }
+  .changeText .year {
+    font-size: 20px;
+  }
+}
+
+
+/* .changeText:hover .aboutus {
   display: none;
   transition: 0.5s;
-}
+} */
 
 .changeText:hover .aarohan {
   display: inline;

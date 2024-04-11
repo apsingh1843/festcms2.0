@@ -114,9 +114,9 @@
     }
   }
   .content {
-    position: fixed;
+    /* position: fixed;
     left: 5.5%;
-    bottom: 4%;
+    bottom: 4%; */
     color: #f1f1f1;
     width: 100%;
     padding: 20px;

@@ -3,268 +3,329 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
   <!-- <link rel="stylesheet" href="{% static 'css/timeline_css.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/timeline_css.css' %}">
+
   <link rel="stylesheet" href="{% static 'css/hamburger.css' %}">
   <link rel="stylesheet" href="{% static 'css/navbar2.css' %}">
+
   <link rel="shortcut icon" type="image/jpg" href="{% static 'aarhnLogo.png' %}" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
-  <link rel="stylesheet" href="{% static 'css/timeline_css.css' %}">
-  <title>Timeline</title>
+
+    <title>Timeline</title>
 </head>
 
 <body>
   {% include 'flow/navbarAndFooter/navbar.html' %}
+  
 
+    {% block content %}
+    {% endblock %}
+    <div class="tcontainer">
+ 
+   
 
-  <!-- OFFCANVAS For Profile Click Event-->
+    
+   {% comment %} <video class = "timeline_vid" loop autoplay muted >
+      <source src="{% static 'videos/timeVid2.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>  {% endcomment %}
 
-  <video src="{% static 'videos/mars.mp4' %}" autoplay muted loop id="video1">
-  </video>
-
-  {% block content %}
-  {% endblock %}
-
-
-  <div class="timeline-container" id="timeline-1">
-    <div class="timeline-header">
-      <h2 class="timeline-header__title">AAROHAN TIMELINE</h2>
-      <h3 class="timeline-header__subtitle">For our 20th edition, we welcome everyone to the phenomenon that is Aarohan.
-        It is about time we get to ushering in The New Dimension.</h3>
-        <div class="Dayz">
-        <a class="btn-ap" style="color:violet" href="{% url 'timelineDay1' %}">Day0</a>
-        <a class="btn-ap" style="color:violet" href="{% url 'timelineDay2' %}">Day1</a>
-        <a class="btn-ap" style="color:violet" href="{% url 'timelineDay3' %}">Day2</a>
-        <a class="btn-ap" style="color:violet" href="{% url 'timelineDay4' %}">Day3</a>
-      </div>
-    </div>
-
-
-    <!-- MAIN PART OF THE PAGE , UNCOMMENT TO USE-->
-
-    <div class="timeline">
-
-      <div class="timeline-item" data-text="">
-        <div class="card">
-          <div class="cardWrapper">
-            <div class="image-event">
-            </div>
-            <div class="event">
-              <h1>Inquest</h1>
-            </div>
-             <h1 style="color:rgb(247, 140, 99)">9:00 am</h1>
-             <br>
-             <div class="event">
-              <h1>B-Plan</h1>
-            </div>
-             <h1 style="color:rgb(247, 140, 99)">9:30 am</h1>
-             <br>
-             <div class="event">
-              <h1>Ingenuitus</h1>
-            </div>
-             <div class="event">
-              <h1>REChase</h1>
-            </div>
-              <h1 style="color:rgb(247, 140, 99)">10:00 am</h1>
-              <br>
-            <br>
-              
-
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-      <div class="timeline-item" data-text="">
-        <div class="card">
-          <div class="cardWrapper">
-            <div class="image-event">
-            </div>
-            <div class="event">
-              <h1>Workshops</h1>
-            </div>
-            <h2> CATIA </h2>
-
-            <h2> Data Science</h2>
-
-            <h2> AI + AR </h2>
-            <h1 style="color:rgb(247, 140, 99)">10:00 am</h1>
-             <br>
-             <div class="event">
-              <h1>Tech Conference</h1>   
-            </div>
-            <h2> Advancing Technology and The Cyberfortess:An unfolding Battle<h2>
-            <h1 style="color:rgb(247, 140, 99)">12:00 noon</h1>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="timeline-item" data-text="">
-        <div class="card">
-          <div class="cardWrapper">
-            <div class="image-event">
-            </div>
-            <div class="event">
-              <h1>Final</h1>
-
-            </div>
-         <h2 style="font-size:20px"> Robodify</h2>
-         <h2 style="font-size:20px"> Invictus</h2>
-         <h2 style="font-size:20px"> Electra</h2>
-            <h1 style="color:rgb(247, 140, 99)">11:00 am</h1>
-            <br>
-            <h2 style="font-size:20px"> Junkyard</h2>
-            <h2 style="font-size:20px"> Contraptions</h2>
-            <h1 style="color:rgb(247, 140, 99)">1:00 pm</h1>
-            <br>
-            <h2 style="font-size:20px"> Lights-Camera-Fiction</h2>
-            <h1 style="color:rgb(247, 140, 99)">3:00 pm</h1>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="timeline-item" data-text="">
-        <div class="card">
-          <div class="cardWrapper">
-            <div class="image-event">
-            </div>
-            <div class="event">
-              <h1>Closing Ceremony</h1>
-            </div>
-            
-
-            <h2 > SM</h2>
-            <h2>MuC</h2>
-            <h1 style="color:rgb(247, 140, 99)">6-8 pm</h1>
-
-            
-
-          </div>
-        </div>
-      </div>
-      <div class="timeline-item" data-text="">
-        <div class="card">
-          <div class="cardWrapper">
-            <div class="image-event">
-            </div>
-            <div class="event">
-              <h1>Stand Up Comedy</h1>
-            </div>
-            <h1 style="color:rgb(247, 140, 99)">8:00 pm</h1>
-
-            <div class="event">
-              <h1>Trivio</h1>
-            </div>
-            <h1 style="color:rgb(247, 140, 99)">10:00 pm</h1>
-            <div class="event">
-              <h1>Decathlon</h1>
-            </div>
-            <h1 style="color:rgb(247, 140, 99)">9:00 pm - 11:00 pm</h1>
-            <div class="event">
-              <h1>Watch Party</h1>
-            </div>
-            <h1 style="color:rgb(247, 140, 99)">11:00 pm</h1>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item" data-text="">
-        <div class="card">
-          <div class="cardWrapper">
-            <div class="image-event">
-            </div>
-            <div class="event">
-              <h1>Overnight Gaming</h1>
-            </div>
-            <h1 style="color:rgb(247, 140, 99)">11:30 pm</h1>
-
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="Dayz">
+       
+    <a class="btn-ap" style="color:rgb(255, 255, 255)" href="{% url 'timelineDay2' %}">Day1</a>
+    <a class="btn-ap" style="color:rgb(255, 255, 255)" href="{% url 'timelineDay3' %}">Day2</a>
+    <a class="btn-ap" style="color:rgb(255, 255, 255)" href="{% url 'timelineDay4' %}">Day3</a>
   </div>
-  {% comment %} <div class="wrapper">
-    <h1>Coming soon</span></h1>
-  </div> {% endcomment %}
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script>
-    document.querySelector('video1').playbackRate = 0.5;
-    /*(function ($) {
-      $.fn.timeline = function () {
-        var selectors = {
-          id: $(this),
-          item: $(this).find(".timeline-item"),
-          activeClass: "timeline-item--active",
-          img: ".timeline__img"
-        };
-        selectors.item.eq(0).addClass(selectors.activeClass);
-        selectors.id.css(
-          "background-image",
-          "url(" +
-          selectors.item
-            .first()
-            .find(selectors.img)
-            .attr("src") +
-          ")"
-        );
-        var itemLength = selectors.item.length;
-        $(window).scroll(function () {
-          var max, min;
-          var pos = $(this).scrollTop();
-          selectors.item.each(function (i) {
-            min = $(this).offset().top;
-            max = $(this).height() + $(this).offset().top;
-            var that = $(this);
-            if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
-              selectors.item.removeClass(selectors.activeClass);
-              selectors.id.css(
-                "background-image",
-                "url(" +
-                selectors.item
-                  .last()
-                  .find(selectors.img)
-                  .attr("src") +
-                ")"
-              );
-              selectors.item.last().addClass(selectors.activeClass);
-            } else if (pos <= max - 40 && pos >= min) {
-              selectors.id.css(
-                "background-image",
-                "url(" +
-                $(this)
-                  .find(selectors.img)
-                  .attr("src") +
-                ")"
-              );
-              selectors.item.removeClass(selectors.activeClass);
-              $(this).addClass(selectors.activeClass);
-            }
-          });
-        });
-      };
-    })(jQuery);
+  <section id="day1" class="timeline active">
+    <ol>
+      <li>
+        <div>
+          <time>THROUGHOUT THE DAY</time> 
+          Crosswords </br> 
+          Mazemerize </br>
+          Startup Fair </br>
+          REC Arcade </br>
+          Linux Corner</br>
+          Interficio</br>
+        </div>
+      </li>
+     
+     
+      <li>
+        <div>
+            <time>09(AM)-12(PM)
+            </time> 
+            <time>01(PM)-03(PM)
+            </time> 
+              WORKSHOP(MNTC)</br>
+              WORKSHOP(SAE)</br>
+              WORKSHOP(CCA)</Br>
+              WORKSHOP(CCA)</Br>
+              
+        </div>
+      </li>
+      <li>
+        <div>
+            <time>09(AM)-12(PM)
+            </time> 
+            <time>01(PM)-03(PM)
+            </time> 
+              WORKSHOP(RECursion)</br>
+              WORKSHOP(Cybersecurity)</br>
+              WORKSHOP(ML)</br>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>09(AM)-12(PM)</time> 
+          Kryptic </br>
+         BPlan</br>
+         Onspot Hackathon</br>
+         Roboliga(ARMAGADON)</br>
+          StreetFury(ARMAGADON)</br>
+         
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>09(AM)-12(PM)</time>   
+          Pitstop (Arena) </br>
+          WDCT Corner(Arena)</br>
+         Quatum Quest(Arena)</br>
+         Robowar(Arena)</br>
+         Foobar CTF (0nline) </br>
+         Hackoverflow(online)</br>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>01(PM)-03(PM)</time> 
+          Clash Of Titans (Arena)</br>
+          Roboliga(ARMAGADON</br>
+          StreetFury(ARMAGADON)</br>
+          Bplan</br>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>01(PM)-03(PM)</time> 
+          Pitstop(Arena)</br>
+         Flying the UAV (Arena)</br>
+        WDCT Corner(Arena)</br>
+           Quantum Quest (Arena)</br>
+           Robowar(Arena)</br>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>01(PM)-03(PM)</time> 
+          Decathlon(Online)<br>
+          Perplexity(2pm-5pm)</br>
+          Hackoverflow(Online)</br>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>03(PM)-06(PM)</time> 
+          Roboliga(ARMAGADON)</br>
+          Journo Detective <br>
+          Esczpe Room(6-8pm)</br>
+          Perplexity(2pm-5pm)</br>
 
-    $("#timeline-1").timeline();*/
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>03(PM)-06(PM)</time> 
+          Flying the UAV (Arena)</br>
+          WDCT Corner(Arena)</br>
+          Seldom(Arena)</br>
+          Robowar(Arena)</br>
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>03(PM)-06(PM)</time> 
+          Decathlon(Online)</br>
+          Trivial Odyssey:Buzzer Quiz (Online)</br>
+          Code Cracker(9pm-11pm)</br>
+        </div>
+      </li>
+    </ol>
+  
+    <div class="arrows">
+      <button class="arrow arrow__prev disabled" disabled>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_prev.svg" alt="prev timeline arrow">
+      </button>
+      <button class="arrow arrow__next">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_next.svg" alt="next timeline arrow">
+      </button>
+    </div>
+  </section>
 
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+    {% comment %} <section id="day2" class="timeline active" style="display: none;">
+      <ol>
+        <li>
+          <div>
+            <time>1939</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1937</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1943</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1946</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1956</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2000</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2005</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li></li>
+      </ol>
+    
+      <div class="arrows">
+        <button class="arrow arrow__prev disabled" disabled>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_prev.svg" alt="prev timeline arrow">
+        </button>
+        <button class="arrow arrow__next">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_next.svg" alt="next timeline arrow">
+        </button>
+      </div>
+    </section>
+
+    <section id="day3" class="timeline active" style="display: none;">
+      <ol>
+        <li>
+          <div>
+            <time>1934</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1937</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1943</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1946</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1956</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2000</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2005</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+          </div>
+        </li>
+        <li></li>
+      </ol>
+    
+      <div class="arrows">
+        <button class="arrow arrow__prev disabled" disabled>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_prev.svg" alt="prev timeline arrow">
+        </button>
+        <button class="arrow arrow__next">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_next.svg" alt="next timeline arrow">
+        </button>
+      </div>
+    </section> {% endcomment %}
+  
+</div>
+    <script src="{% static 'js/timeline.js' %}"></script>
+
   <script src="{% static 'js/home.js' %}"></script>
   {% include 'flow/navbarAndFooter/footer.html' %}
-
 </body>
 
 </html>
